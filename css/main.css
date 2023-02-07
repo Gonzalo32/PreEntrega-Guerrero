@@ -45,18 +45,8 @@ nav a:hover {
     color: rgb(91, 150, 91);
 }
 
-@media (max-width:700px) {
-    header {
-        flex-direction: column;
-    }
-
-    nav {
-        padding: 10px 0px;
-    }
-}
-
 main {
-    margin-bottom: 10px;
+    margin-bottom: 0rem;
     padding: 0px;
     padding-bottom: auto;
 }
@@ -77,15 +67,14 @@ main {
 
 /* margin-bottom: 1rem;  */
 footer {
-    height: 100px;
+    height: auto;
     background-color: rgb(0, 0, 0);
     flex-direction: column;
     align-items: center;
-    padding: 0px 8%;
-    width: 100%;
+    padding: 0px 0%;
+    width: auto;
     justify-content: center;
-    position: fixed;
-    bottom: 0%;
+
 }
 
 .footer-menu-container {
@@ -111,7 +100,7 @@ footer {
 
 
 integrante-main {
-    margin-bottom: 10px;
+
     padding: 0px;
     padding-bottom: auto;
     justify-content: center;
@@ -120,72 +109,92 @@ integrante-main {
 }
 
 .main-dos {
-    margin-bottom: 10px;
+    margin-bottom: 4rem;
     width: 160px;
-    padding: 0px;
-    padding-bottom: auto;
-    justify-content: center;
-    align-items: center;
 }
 
 .grid {
     display: grid;
     background-color: rgb(97, 122, 97);
+    grid-template-columns: auto auto;
+    grid-template-rows: 20rem;
+    width: auto;
+}
 
-    grid-template-columns:  auto auto;
-    grid-template-rows: auto ;
+.grid>* {
+    border: 1px solid black;
+    height: auto;
 }
 
 .integran-img {
-    width: 100%;
+
     background-color: rgb(97, 122, 97);
     width: auto;
     height: auto;
-    margin-bottom: 10px;
     padding: 0px;
-    padding-bottom: auto;
     justify-content: center;
     align-items: center;
 }
 
-.integrante-uno {
+.integrante {
     background-color: rgb(97, 122, 97);
     width: auto;
+    height: auto;
+}
+
+
+
+@media all and (max-width: 600px) {
+
+    div.integrante,
+    div.text {
+        grid-column: 1;
+    }
+
+    /*desde aca*/
+    .grid {
+        grid-template-rows: 20rem;
+        background-color: rgb(97, 109, 97);
+    }
+
+    .integrante {
+        background-color: rgb(60, 73, 59);
+        color: white;
+    }
+
+    /*hasta aca, se aplica media query, solo al grid*/
+
+    /*a partir de acá se aplicara media a la pagina de inicio que es el index*/
+    header.hea-uno {
+        background-color: rgb(60, 72, 60);
+    }
+
+    body.bod-uno {
+        background-color: rgb(65, 76, 70);
+    }
+
+    main.mai-uno {
+        background-color: rgb(65, 76, 70);
+    }
+
+    div.intermedio-uno {
+        color: white;
+        width: auto;
+        margin-right: 10%;
+    }
+
+    div.intermedio-dos {
+        color: white;
+        width: auto;
+        margin-right: 10%;
+    }
+
+    /*hasta aca aplicado el media query para inicio*/
 
 }
 
-.integrante-dos {
-    background-color: rgb(97, 122, 97);
-    width: auto;
-
-}
-
-.integrante-tres {
-    background-color: rgb(97, 122, 97);
-    width: auto;
 
 
-}
-
-.integrante-cuatro {
-    background-color: rgb(97, 122, 97);
-    width: auto;
-
-
-}
-
-.integrante-cinco {
-    background-color: rgb(97, 122, 97);
-    width: auto;
-
-
-}
-
-.integrante-seis {
-    background-color: rgb(97, 122, 97);
-    width: auto;
-
-}
 
 .main-tres {
     width: 100%;
@@ -199,7 +208,7 @@ integrante-main {
 
 iframe {
     width: 100%;
-    height: auto;
+    height: 40rem;
     margin-bottom: 10px;
     padding: 0px;
     padding-bottom: auto;
@@ -220,4 +229,23 @@ iframe {
 
 .histori {
     font-size: larger;
+}
+
+.contact{
+    background-image: linear-gradient(to right, rgb(181, 196, 181),rgb(30, 35, 32));
+}
+.contacto{
+    background-image: linear-gradient(to right, rgb(181, 196, 181),rgb(47, 55, 49));
+    animation-duration: 3s;
+    animation-name: aparecer;
+    animation-iteration-count: infinite;
+}
+
+@keyframes aparecer{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
