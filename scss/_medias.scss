@@ -1,0 +1,81 @@
+@import"../_colores.scss";
+
+@media all and (max-width: 600px) {
+
+    div.integrante,
+    div.text {
+        grid-column: 1;
+    }
+
+    /*desde aca*/
+  
+
+    .integrante {
+        background-color: rgb(60, 73, 59);
+        color: $color-negro;
+    }
+
+    /*hasta aca, se aplica media query, solo al grid*/
+
+    /*a partir de acá se aplicara media a la pagina de inicio que es el index*/
+
+        body {
+        background-color: rgb(65, 76, 70);
+    }
+    
+
+main{
+
+
+    main.mai-uno {
+        background-color: rgb(65, 76, 70);
+    }
+
+    div.intermedio {
+        color: $color-blanco;
+        width: auto;
+        margin-right: 10%;
+    }
+  .grid {
+        grid-template-rows: 20rem;
+        background-color: $color-cuatro;
+        color: $color-blanco;
+    }
+
+    .estiloIntegrantes{
+        margin: 1%;
+    }
+  
+    /*hasta aca aplicado el media query para inicio*/
+
+}
+footer {
+    height: auto;
+    background-color: $color-negro;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 0%;
+    width: auto;
+    justify-content: center;
+
+    .footer-menu-container {
+        list-style-type: none;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .menu-item {
+        color: $color-blanco;
+        margin: 1rem 1.5rem;
+    }
+
+    .copyright {
+        color: $color-blanco;
+        opacity: 0.3;
+    }
+}
+
+}

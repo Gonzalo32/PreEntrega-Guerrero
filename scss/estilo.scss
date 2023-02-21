@@ -1,0 +1,205 @@
+@import"../scss/_colores";
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10;
+    transition: 0.5s;
+
+}
+
+/*evita que los margin y lo padding crezcan mas que lo especificado*/
+
+img {
+    width: 100%;
+}
+
+
+header {
+    min-height: 70px;
+    background-color: $color-tres;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+
+    .logo img {
+        height: 40px;
+        margin-right: 10%;
+    }
+
+
+    a {
+        text-decoration: none;
+        color: $color-negro;
+
+    }
+
+    nav a {
+        font-weight: 600;
+        padding-right: 10px;
+    }
+
+    nav a:hover {
+        color: $color-dos;
+    }
+}
+
+
+main {
+    margin-bottom: 0rem;
+    padding: 0px;
+    padding-bottom: auto;
+
+
+    div.intermedio {
+        font-size: medium;
+        margin: 1rem;
+        font-family: sans-serif;
+        padding: 10px;
+    }
+
+    p {
+        margin: 10px;
+    }
+
+
+    .main-tres {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        padding: 0px;
+        padding-bottom: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-dos {
+        margin-bottom: 10px;
+        width: 160px;
+        padding: 0px;
+        padding-bottom: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .grid {
+        display: grid;
+        background-color: $color-uno;
+        grid-template-columns:  auto auto;
+        grid-template-rows: auto ;
+    }
+    
+    .integran-img {
+        width: 100%;
+        background-color: $color-uno;
+        width: auto;
+        height: auto;
+        margin-bottom: 10px;
+        padding: 0px;
+        padding-bottom: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+    .integrante{
+        background-color: $color-uno;
+        width: auto;
+    
+    }
+    
+iframe {
+    width: 70%;
+    margin-bottom: 10px;
+    padding-bottom: auto;
+    padding-left: 30%;
+}
+
+
+.main-cuatro {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    padding: 0px;
+    padding-bottom: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.histori {
+    font-size: larger;
+}
+
+
+.contact{
+    background-image: linear-gradient(to right, rgb(181, 196, 181),rgb(30, 35, 32));
+}
+.contacto{
+    background-image: linear-gradient(to right, rgb(181, 196, 181),rgb(47, 55, 49));
+    animation-duration: 3s;
+    animation-name: aparecer;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes aparecer{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+}
+
+/* margin-bottom: 1rem;  */
+footer {
+    height: auto;
+    background-color: $color-negro;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 0%;
+    width: auto;
+    justify-content: center;
+
+    .footer-menu-container {
+        list-style-type: none;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .menu-item {
+        color: $color-blanco;
+        margin: 1rem 1.5rem;
+    }
+
+    .copyright {
+        color: $color-blanco;
+        opacity: 0.3;
+    }
+}
+
+
+.integrante-main {
+    margin-bottom: 10px;
+    padding: 0px;
+    padding-bottom: auto;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+@import"../_medias.scss";

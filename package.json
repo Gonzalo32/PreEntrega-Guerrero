@@ -1,0 +1,26 @@
+{
+  "name": "preentrega2guerrero",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css":"node-sass --include-path scss scss/estilo.scss css/main.css",
+    "watch-css":"nodemon -e scss -x \"npm run build-css\""
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gonzalo32/PreEntrega-Guerrero.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gonzalo32/PreEntrega-Guerrero/issues"
+  },
+  "homepage": "https://github.com/Gonzalo32/PreEntrega-Guerrero#readme",
+  "description": "",
+  "devDependencies": {
+    "node-sass": "^8.0.0",
+    "nodemon": "^2.0.20"
+  }
+}
