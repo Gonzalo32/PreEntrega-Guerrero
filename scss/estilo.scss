@@ -1,18 +1,36 @@
 @import"../scss/_colores";
 
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 10;
     transition: 0.5s;
 
+
+
+}
+
+
+@mixin ancho{
+    width: 100%;
+}
+
+@mixin justify{
+    justify-content: center;
+
+}
+
+div.grid-general{
+    display: grid;
+    grid-template-rows: auto 1fr auto; 
+    grid-template-columns: 1fr;
 }
 
 /*evita que los margin y lo padding crezcan mas que lo especificado*/
 
 img {
-    width: 100%;
+    @include ancho;
 }
 
 
@@ -34,11 +52,9 @@ header {
         margin-right: 10%;
     }
 
-
     a {
         text-decoration: none;
         color: $color-negro;
-
     }
 
     nav a {
@@ -56,9 +72,10 @@ main {
     margin-bottom: 0rem;
     padding: 0px;
     padding-bottom: auto;
-
+    display: flexbox;
 
     div.intermedio {
+
         font-size: medium;
         margin: 1rem;
         font-family: sans-serif;
@@ -71,132 +88,177 @@ main {
 
 
     .main-tres {
-        width: 100%;
+        @include ancho;
+        @include justify;
         height: auto;
         margin-bottom: 10px;
         padding: 0px;
         padding-bottom: auto;
-        justify-content: center;
         align-items: center;
     }
 
     .main-dos {
+        @include justify;
         margin-bottom: 10px;
         width: 160px;
         padding: 0px;
         padding-bottom: auto;
-        justify-content: center;
         align-items: center;
     }
-    
+
     .grid {
         display: grid;
         background-color: $color-uno;
-        grid-template-columns:  auto auto;
-        grid-template-rows: auto ;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
     }
-    
+
     .integran-img {
-        width: 100%;
+        @include ancho;
         background-color: $color-uno;
         width: auto;
         height: auto;
         margin-bottom: 10px;
         padding: 0px;
         padding-bottom: auto;
-        justify-content: center;
+        @include justify;
         align-items: center;
     }
-    
-    
-    .integrante{
+
+
+    .integrante {
         background-color: $color-uno;
         width: auto;
+
+    }
+
+    iframe {
+        width: 70%;
+        margin-bottom: 10px;
+        padding-bottom: auto;
+        padding-left: 30%;
+    }
+
+
+    .main-cuatro {
+        @include ancho;
+        height: auto;
+        margin-bottom: 10px;
+        padding: 0px;
+        padding-bottom: auto;
+        @include justify;
+        align-items: center;
+    }
+
+
+    .histori {
+        font-size: larger;
+    }
+
+
+    .contact {
+        background-image: linear-gradient(to right, rgb(181, 196, 181), rgb(30, 35, 32));
+    }
+
+        .cotact-grid {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto;      
+        }
     
+
+    .contacto {
+        background-image: linear-gradient(to right, rgb(181, 196, 181), rgb(47, 55, 49));
+        animation-duration: 3s;
+        animation-name: aparecer;
+        animation-iteration-count: 2;
     }
-    
-iframe {
-    width: 70%;
-    margin-bottom: 10px;
-    padding-bottom: auto;
-    padding-left: 30%;
-}
 
 
-.main-cuatro {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-    padding: 0px;
-    padding-bottom: auto;
-    justify-content: center;
-    align-items: center;
-}
+    @keyframes aparecer {
+        0% {
+            opacity: 0;
+        }
 
-
-.histori {
-    font-size: larger;
-}
-
-
-.contact{
-    background-image: linear-gradient(to right, rgb(181, 196, 181),rgb(30, 35, 32));
-}
-.contacto{
-    background-image: linear-gradient(to right, rgb(181, 196, 181),rgb(47, 55, 49));
-    animation-duration: 3s;
-    animation-name: aparecer;
-    animation-iteration-count: infinite;
-}
-
-
-@keyframes aparecer{
-    0%{
-        opacity: 0;
+        100% {
+            opacity: 1;
+        }
     }
-    100%{
-        opacity: 1;
-    }
-}
 
 }
 
-/* margin-bottom: 1rem;  */
+/* margin-bottom: 1rem;  
 footer {
     height: auto;
     background-color: $color-negro;
-    flex-direction: column;
+    //flex-direction: column;
     align-items: center;
     padding: 0px 0%;
     width: auto;
-    justify-content: center;
+    @include justify;
+    color: $color-blanco;
 
+}
     .footer-menu-container {
+        @extend .foot-uno;
         list-style-type: none;
         font-size: 18px;
         display: flex;
-        justify-content: center;
+        //align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .menu-item {
+        @extend .foot-uno;
+        margin: 1rem 1.5rem;
+    }
+
+    .copyright {
+        @extend .foot-uno;
+        opacity: 0.3;
+    }
+
+*/
+
+
+/* margin-bottom: 1rem;  */
+ .foot-uno{
+    height: auto;
+    background-color: $color-negro;
+    align-items: center;
+    padding: 0px 0%;
+    width: auto;
+    @include justify();
+    color: $color-blanco;
+
+}
+
+    .footer-menu-container {
+        @extend .foot-uno;
+        list-style-type: none;
+        font-size: 18px;
+        display: flex;
         align-items: center;
         flex-wrap: wrap;
     }
 
     .menu-item {
-        color: $color-blanco;
+        @extend .foot-uno;
         margin: 1rem 1.5rem;
     }
 
     .copyright {
-        color: $color-blanco;
+        @extend .foot-uno;
         opacity: 0.3;
     }
-}
+
 
 
 .integrante-main {
     margin-bottom: 10px;
     padding: 0px;
     padding-bottom: auto;
-    justify-content: center;
+    @include justify;
     align-items: center;
 
 }

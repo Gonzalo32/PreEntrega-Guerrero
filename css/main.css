@@ -5,6 +5,11 @@
   padding: 10;
   transition: 0.5s; }
 
+div.grid-general {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr; }
+
 /*evita que los margin y lo padding crezcan mas que lo especificado*/
 img {
   width: 100%; }
@@ -33,7 +38,8 @@ header {
 main {
   margin-bottom: 0rem;
   padding: 0px;
-  padding-bottom: auto; }
+  padding-bottom: auto;
+  display: flexbox; }
   main div.intermedio {
     font-size: medium;
     margin: 1rem;
@@ -43,18 +49,18 @@ main {
     margin: 10px; }
   main .main-tres {
     width: 100%;
+    justify-content: center;
     height: auto;
     margin-bottom: 10px;
     padding: 0px;
     padding-bottom: auto;
-    justify-content: center;
     align-items: center; }
   main .main-dos {
+    justify-content: center;
     margin-bottom: 10px;
     width: 160px;
     padding: 0px;
     padding-bottom: auto;
-    justify-content: center;
     align-items: center; }
   main .grid {
     display: grid;
@@ -91,11 +97,15 @@ main {
     font-size: larger; }
   main .contact {
     background-image: linear-gradient(to right, #b5c4b5, #1e2320); }
+  main .cotact-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto; }
   main .contacto {
     background-image: linear-gradient(to right, #b5c4b5, #2f3731);
     animation-duration: 3s;
     animation-name: aparecer;
-    animation-iteration-count: infinite; }
+    animation-iteration-count: 2; }
 
 @keyframes aparecer {
   0% {
@@ -103,28 +113,60 @@ main {
   100% {
     opacity: 1; } }
 
-/* margin-bottom: 1rem;  */
+/* margin-bottom: 1rem;  
 footer {
+    height: auto;
+    background-color: $color-negro;
+    //flex-direction: column;
+    align-items: center;
+    padding: 0px 0%;
+    width: auto;
+    @include justify;
+    color: $color-blanco;
+
+}
+    .footer-menu-container {
+        @extend .foot-uno;
+        list-style-type: none;
+        font-size: 18px;
+        display: flex;
+        //align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .menu-item {
+        @extend .foot-uno;
+        margin: 1rem 1.5rem;
+    }
+
+    .copyright {
+        @extend .foot-uno;
+        opacity: 0.3;
+    }
+
+*/
+/* margin-bottom: 1rem;  */
+.foot-uno, .footer-menu-container, .menu-item, .copyright {
   height: auto;
   background-color: black;
-  flex-direction: column;
   align-items: center;
   padding: 0px 0%;
   width: auto;
-  justify-content: center; }
-  footer .footer-menu-container {
-    list-style-type: none;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; }
-  footer .menu-item {
-    color: white;
-    margin: 1rem 1.5rem; }
-  footer .copyright {
-    color: white;
-    opacity: 0.3; }
+  justify-content: center;
+  color: white; }
+
+.footer-menu-container {
+  list-style-type: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; }
+
+.menu-item {
+  margin: 1rem 1.5rem; }
+
+.copyright {
+  opacity: 0.3; }
 
 .integrante-main {
   margin-bottom: 10px;
